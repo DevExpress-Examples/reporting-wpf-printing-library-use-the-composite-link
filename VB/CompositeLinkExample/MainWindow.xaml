@@ -1,4 +1,4 @@
-﻿<Window x:Class="CompositeLinkExample.MainWindow"
+<Window x:Class="CompositeLinkExample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="477" Width="908" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:my="clr-namespace:CompositeLinkExample.nwindDataSetTableAdapters" xmlns:my1="clr-namespace:CompositeLinkExample">
