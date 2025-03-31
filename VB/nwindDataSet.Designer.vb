@@ -28,7 +28,7 @@ Namespace CompositeLinkExample
 
         Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
 
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>
         Public Sub New()
             Me.BeginInit()
             Me.InitClass()
@@ -36,43 +36,6 @@ Namespace CompositeLinkExample
             AddHandler MyBase.Tables.CollectionChanged, schemaChangedHandler
             AddHandler MyBase.Relations.CollectionChanged, schemaChangedHandler
             Me.EndInit()
-        End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context, False)
-            If (Me.IsBinarySerialized(info, context) = True) Then
-                Me.InitVars(False)
-                Dim schemaChangedHandler1 As New Global.System.ComponentModel.CollectionChangeEventHandler(AddressOf Me.SchemaChanged)
-                AddHandler Me.Tables.CollectionChanged, schemaChangedHandler1
-                AddHandler Me.Relations.CollectionChanged, schemaChangedHandler1
-                Return
-            End If
-            Dim strSchema As String = (DirectCast(info.GetValue("XmlSchema", GetType(String)), String))
-            If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
-                Dim ds As New Global.System.Data.DataSet()
-                ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-                If (ds.Tables("Categories") IsNot Nothing) Then
-                    MyBase.Tables.Add(New CategoriesDataTable(ds.Tables("Categories")))
-                End If
-                If (ds.Tables("Products") IsNot Nothing) Then
-                    MyBase.Tables.Add(New ProductsDataTable(ds.Tables("Products")))
-                End If
-                Me.DataSetName = ds.DataSetName
-                Me.Prefix = ds.Prefix
-                Me.Namespace = ds.Namespace
-                Me.Locale = ds.Locale
-                Me.CaseSensitive = ds.CaseSensitive
-                Me.EnforceConstraints = ds.EnforceConstraints
-                Me.Merge(ds, False, Global.System.Data.MissingSchemaAction.Add)
-                Me.InitVars()
-            Else
-                Me.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            End If
-            Me.GetSerializationData(info, context)
-            Dim schemaChangedHandler As New Global.System.ComponentModel.CollectionChangeEventHandler(AddressOf Me.SchemaChanged)
-            AddHandler MyBase.Tables.CollectionChanged, schemaChangedHandler
-            AddHandler Me.Relations.CollectionChanged, schemaChangedHandler
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), Global.System.ComponentModel.Browsable(False), Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)> _
@@ -304,7 +267,7 @@ Namespace CompositeLinkExample
                 Me.EndInit()
             End Sub
 
-            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>
             Friend Sub New(ByVal table As Global.System.Data.DataTable)
                 Me.TableName = table.TableName
                 If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
@@ -318,12 +281,6 @@ Namespace CompositeLinkExample
                 End If
                 Me.Prefix = table.Prefix
                 Me.MinimumCapacity = table.MinimumCapacity
-            End Sub
-
-            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-            Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-                MyBase.New(info, context)
-                Me.InitVars()
             End Sub
 
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
@@ -602,7 +559,7 @@ Namespace CompositeLinkExample
                 Me.EndInit()
             End Sub
 
-            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>
             Friend Sub New(ByVal table As Global.System.Data.DataTable)
                 Me.TableName = table.TableName
                 If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
@@ -616,12 +573,6 @@ Namespace CompositeLinkExample
                 End If
                 Me.Prefix = table.Prefix
                 Me.MinimumCapacity = table.MinimumCapacity
-            End Sub
-
-            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-            Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-                MyBase.New(info, context)
-                Me.InitVars()
             End Sub
 
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _

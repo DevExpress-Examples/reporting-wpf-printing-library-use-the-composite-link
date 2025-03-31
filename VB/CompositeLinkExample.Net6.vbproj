@@ -16,7 +16,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <Platforms>x86;AnyCPU</Platforms>
-    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <DefaultItemExcludes>obj*/**</DefaultItemExcludes>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -71,7 +71,7 @@
     <PackageReference Include="DevExpress.Wpf.Printing" Version="24.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Reporting" Version="24.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.*-*" />
-    <PackageReference Include="System.Data.OleDB" Version="5.0" />
+    <PackageReference Include="System.Data.OleDB" Version="8.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\nwind.mdb">
